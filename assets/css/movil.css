@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url('../img/fondo3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: black;
+}
+
+header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;   
+    padding: 30px 10%;
+}
+
+header a{
+    color: #cdd191;
+    text-decoration: none;
+}
+
+.logo{
+    background-size: cover;
+    cursor: pointer;
+    width: 5%;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    color: #cdd191;
+    border-bottom: #cdd191 solid 2px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #ffffff;    
+}
+
+.nav_links .menu{
+    display: none;
+}
+.nav_links .nuestras_empresas {
+    display: none;
+}
+
+@media screen and (max-width: 775px) {
+    header{ justify-content: center;}
+    .empresa {display: none;}
+    .logo { display: none;}
+    .nav_links li{ padding: 0px 5px;}
+    .nav_links .nuestras_empresas { display: inline;}
+    .logo_empresas { display: none;}
+}
+
+/* Portada */
+.portada{
+    height: 100%;
+}
+
+.portada h1{
+    text-align: center;
+    color: #fff;
+    padding-top: 3vw;
+}
+.portada p{
+    color: #fff;
+    padding: 2vw 10vw 0 9vw;
+    font-size: 5vw;
+    text-align: center;
+}
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vw;
+}
+
+.btnContacto{
+    background-color: #fff;
+    color: #000;
+    font-weight: bolder;
+    padding: 1.5vw;
+    text-decoration: none;
+    border-radius: 1vw;
+}

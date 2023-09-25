@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+
+header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;   
+    padding: 30px 30px;
+    font-size: 1.3rem;
+}
+
+header a{
+    color: #cdd191;
+    text-decoration: none;
+}
+
+.logo{
+    background-size: cover;
+    cursor: pointer;
+    width: 5%;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    color: #cdd191;
+    border-bottom: #cdd191 solid 2px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #ffffff;    
+}
+
+.nav_links .menu{
+    display: none;
+}
+.nav_links .nuestras_empresas {
+    display: none;
+}
+.home {
+    margin-left: 10rem;
+}
+@media screen and (max-width: 905px) {
+    header{ justify-content: center;}
+    .empresa {display: none;}
+    .home {display: none;}
+    .logo { display: none;}
+    .nav_links li{ padding: 0px 5px;}
+    .nav_links .nuestras_empresas { display: inline;}
+    .logo_empresas { display: none;}
+}
+
+/* Portada */
+.portada{
+    margin-top: 10vw;
+}
+.portada h1, p{
+    color: #fff;
+    font-size: 3vw;
+    text-align: center;
+}
+.btnWhat{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+.fab {
+    color: #cdd191;
+    font-size: 3rem;
+}
+.imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.imagen img{
+    width: 60%;
+}
+/* Sobre Nosotros */
+.resumen {
+    margin-top: 10rem;
+    padding: 0 7rem;
+}
+.resumen p{
+    color: #fff;
+    text-align: center;
+    font-size: 2vw;
+    margin: 4rem 0;
+}
+.design {
+    display: flex;
+    justify-content: center;
+}
+.design img{
+    width: 15%;
+    margin-bottom: 4rem;
+}
+.trailer {
+    display: flex;
+    justify-content: center;
+}
+.trailer img{
+    width: 35%;
+    margin-bottom: 4rem;
+}
+.movil {
+    display: flex;
+    justify-content: center;
+}
+.movil img{
+    width: 20%;
+    margin-bottom: 4rem;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 4rem 0;
+}
+.centrar {
+    display: flex;
+    justify-content: center;
+}
+.enlace {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: red;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+/* Galeria */
+.container-grid {
+    padding: 0 4vw 4vw 4vw;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "img1 img2 img3 img3 img3"
+    "img1 img2 img3 img3 img3"
+    "img4 img4 img3 img3 img3"
+    "img4 img4 img3 img3 img3"
+    "img6 img6 img5 img5 img5"
+    "img6 img6 img5 img5 img5";
+    gap: 5px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img:hover{
+    filter: grayscale(50%);
+    cursor: pointer;
+    transition: filter .5s;
+}
+.img-1{grid-area: img1;}
+.img-2{grid-area: img2;}
+.img-3{grid-area: img3;}
+.img-4{grid-area: img4;}
+.img-5{grid-area: img5;}
+.img-6{grid-area: img6;}
+
+.container-img{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s ease-in;
+}
+.move{
+    transform: translateX(0);
+}
+.img-show{
+    transform: scale(0);
+    height: 80%;
+    display: block;
+    object-fit: cover;
+    transition: transform .2s .4s;
+}
+
+.show{
+    transform: scale(1);
+}
+.copy{
+    position: fixed;
+    color: #fff;
+    bottom: 40px;
+}
+
+.icon{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+    .nav_links li a {
+        font-size: 12px;
+    }
+    .portada {
+        display: flex;
+        flex-direction: column;
+    }
+    .imagen {
+        display: flex;
+        justify-content: center;
+    }
+    .contenido {
+        order: 1;
+    }
+    .design img{
+        width: 30%;
+    }
+    .movil img{
+        width: 40%;
+    }
+    .trailer img{
+        width: 70%;
+    }
+    .resumen {
+        padding: 0 2rem;
+    }
+    .resumen p{
+        font-size: 5vw;
+    }
+    .img-show{
+        width: 90%;
+    }
+
+    .copy{
+        bottom: 20px;
+    }
+
+    .icon{
+        font-size: 15px;
+    }
+}

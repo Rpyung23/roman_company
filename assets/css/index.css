@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: black;
+}
+#preloader{
+    background: #000 url(../img/logoRC-01.png) no-repeat center center;
+    background-size: 5%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;   
+    padding: 30px 10%;
+}
+
+header a{
+    color: #cdd191;
+    text-decoration: none;
+    font-weight: bold;
+}
+.company {
+    display: flex;
+    flex-direction: column;
+}
+.holding {
+    text-align: center;
+    font-size: 10px;
+}
+.logo{
+    background-size: cover;
+    cursor: pointer;
+    width: 5%;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    color: #cdd191;
+    border-bottom: #cdd191 solid 2px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #ffffff;    
+}
+
+.nav_links .nuestras_empresas {
+    display: none;
+}
+/* Boton responsivo */
+.toggle-btn{
+    border-radius: 1px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+.toggle-btn {
+    font-size: 25px;
+}
+#sidebar{
+    color: #ffffff;
+    width: 100%;
+    height: 25%;
+    position: fixed;
+    background-color: #000;
+    text-align: center;
+    left: -100vw;
+    transition: all 0.3s linear;
+}
+#sidebar.active {
+    left: 0;
+}
+#sidebar li{
+    padding: 8px 0;
+    font-size: 20px;
+}
+/* Portada */
+.portada h1{
+    color: #cdd191;
+    text-align: center;
+    position: relative;
+    animation: mymove;
+    animation-duration: 3s;
+    display: none;
+}
+@keyframes mymove {
+    0%   { left:0px; top:0px;}
+    75%  { left:0px; top:200px;} 
+    100% { left:0px; top:0px;}
+  }
+
+@media screen and (max-width: 775px) {
+    .portada h1{
+        display: block;
+        position: static;
+    }
+}
+.contenido{
+    display: flex;
+    height: calc(90vh - 70px);
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 104px;
+}
+
+.contenido li,a{
+    text-decoration: none;
+    list-style: none;
+    color: #cdd191;
+    margin: 5px 0;
+}
+
+.redirect_empresas {
+    display: contents;
+}
+
+.logo_empresas{
+    height: 18%;
+    background-size: contain;
+    cursor: pointer;
+    animation: rotate;
+    animation-duration: 20s;
+}
+
+.fab{
+    font-size: 20px;
+    margin: 3px;
+    font-size: 1.5rem;
+}
+
+@keyframes rotate {
+    0%   { transform: rotate(0);}
+    25%  { transform: rotate(90deg);} 
+    25%  { transform: rotate(180deg);} 
+    100% { transform: rotate(360deg);}
+  }
+@media screen and (max-width: 775px) {
+    #preloader{background-size: 20%;}
+    body{ background-image: url('../img/fondo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: 165%;
+    }
+}
+
+@media screen and (max-width: 775px) {  
+    .toggle-btn{display: block;}
+    .logo{display: none;}
+    .nav_links{display: none;}
+    .contenido{padding: 0 30px;}
+}

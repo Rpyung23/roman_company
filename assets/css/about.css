@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-image: url('../img/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+@media screen and (max-width: 775px) {
+    body{ background-image: url('../img/about-movil.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+}
+header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;   
+    padding: 30px 10%;
+    font-size: 1.3rem;
+}
+
+header a{
+    color: #cdd191;
+    text-decoration: none;
+}
+
+.nav_links li {   
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    border-bottom: #cdd191 solid 2px;
+    color: #cdd191;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #ffffff;
+}
+
+/* Portada */
+.portada{
+    height: 180%;
+}
+
+.portada p{
+    color: #cdd191;
+    padding: 18vw 10vw 0 10vw;
+    font-size: 5vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 775px) {
+     header .empresa{ display: none;}
+    .portada{ height: 113vw;}
+    .portada p{ padding: 33vw 13vw 0 13vw;}
+   footer .contenido h1{font-size: 8px;} 
+}
+.contenido{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
+}
+
+.contenido li,a{
+    text-decoration: none;
+    list-style: none;
+    color: #cdd191;
+}
+
+.contenido ul{
+    padding-bottom: 2vw;
+}
+
+.contenido h1{
+    color: #cdd191;
+    font-size: 20px;
+    padding-bottom: 2vw;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.fab{
+    font-size: 20px;
+    margin: 3px;
+    font-size: 1.5rem;
+}
